@@ -1,0 +1,26 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. ArithmeticOperationsCOBOL.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 NUM1        PIC 9(5) VALUE 25.
+       01 NUM2        PIC 9(5) VALUE 10.
+       01 RESULT      PIC 9(6).
+       
+       PROCEDURE DIVISION.
+           COMPUTE RESULT = NUM1 + NUM2
+           DISPLAY 'Sum: ' RESULT
+
+           COMPUTE RESULT = NUM1 - NUM2
+           DISPLAY 'Subtraction: ' RESULT
+
+           COMPUTE RESULT = NUM1 * NUM2
+           DISPLAY 'Multiplication: ' RESULT
+
+           DIVIDE NUM1 BY NUM2 GIVING RESULT
+           DISPLAY 'Division: ' RESULT
+
+           COMPUTE RESULT = FUNCTION MOD(NUM1, NUM2)
+           DISPLAY 'Modulus: ' RESULT
+
+           STOP RUN.
